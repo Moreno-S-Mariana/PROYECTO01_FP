@@ -18,7 +18,7 @@ int main(){
         if(t==1) strcat(binario, "1");
         else strcat(binario, "0");
 
-    }whil(num!=1 &&2 num!=0);
+    }while(num!=1 &&2 num!=0);
                                     //"1\0"
     if(num== 1) strcat(binario,"1");
 

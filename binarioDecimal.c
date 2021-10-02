@@ -14,5 +14,5 @@ int main(){
         pot = pot + 1;
     }
     printf("%d\n", num);
-    return 0.,
+    return 0;
 }
