@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "CONV.C": "cpp",
+        "conversiones.h": "c",
+        "DIV.C": "cpp"
+    }
+}
