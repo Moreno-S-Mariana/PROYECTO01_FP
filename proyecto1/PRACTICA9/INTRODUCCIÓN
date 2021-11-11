@@ -1,0 +1,51 @@
+ARREGLOS UNIDIMENSIONALES 
+
+    ARREGLO= variable que almacena valores de un mismo tipo
+        Valor = elemeto del ARREGLO
+        Cada elemento tiene un indice específico
+        La dimensión de un ARREGLO depende de cuántos índices se necesitan para acceder a un elemento
+                    Una variable entero ocupa 4 bytes de memoria 
+                    Un arreglo de 4 enteros ocuparía 16 bytes 
+                            Los indices de  un arreglo por ejemplo el de 4 serían 0,1,2,3,4
+                                 Por lo anterior sabemos que los indices de un arreglo van de 0, hasta n-1
+                                 
+        <tipo de dato> nombre [ < número de elementos >];
+  
+    
+        
+
+APUNTADORES 
+    APUNTADOR= Un apuntador es una variable que almacena la dirección de memoria de otra variable 
+        Su tamaño no cambia respecto al tipo de dato que apunte 
+
+    DECLARACIÓN DEL APUNTADROR 
+            UN APUNTADOR SIEMPRE VA A GUARDAR UNA DIRECCIÓN DE MEMORIA 
+    <tipo de dato> *nombre que se va a poner ; 
+
+        asignación 
+            apunta a una variable ya definida por el programador
+            apunta a una variable anónima mediante el uso de la función malloc 
+                malloc reserva la cantidad de memoria que nosotros le digamos 
+                DIRECCIÓN APUNTADA POR EL APUNTADOR= lo que guarda el apuntador
+
+                PARA OBTENER LA DIRECCIÓN DE MEMORIA APUNTADA POR EL APUNTADOR ANTEPONGO UN AMPERSON
+                        &ptr_array2
+                             simplemente 
+                                imprimir ptr_array    sin el ampersen 
+                SI QUIERO EL CONTENIDO DE LA DIRECCIÓN APUNTADA ANTEPONGO EL ASTERISCO* 
+                    Para el contenido de lo que está siendo apuntado 
+                        *ptr_array2
+                        ptr_array[o]
+
+                      ARITMETICA DE APUNTADORES
+
+
+
+
+                      REPORTE DE PRACTICA SON LOS COMENTARIOS DE LOS EJEMPLOS Y HACER ALGUNAS PRUEBAS CON LOS ARREGLO 
+                      PROBAR EL EJERCICIO 6 CON INDICES NEGATIVOS CON EL PTR ARRAY 2 Y DEIR LO QUE PASA
+
+
+
+                    
+

@@ -1,25 +1,20 @@
-// elaborar un algoritmo que permita calcular ek area y volumen de un cilindro
-
-//entrada: altura radio que puede ser de las numero reales 
-//salidas: area y el volumen valores reales 
-
-//fórmula 
-//  V=Pi *radio*radio*altura 
-//  A= 2*pi*radio+2*pi*radio*altura
-// factorizando la formula del area 
-//A=2PI*radio(radio+altura)
-
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <ctype.h>
 
+
 int main(int argc, char **argv){ //main tambien recibe argumentos      **argv es un apuntador que apunta a otro apuntador 
     float radio,altura;
     float area, volumen;
 
-    printf("ingrese el valor del radio y la altura ");
-    scanf ("%f %f", &radio, &altura );
+    if (argc <3){
+        printf("Faltan argumentos\n");
+        exit (-1);
+    }
+
+    radio=atof(argv[1]); //atof sorve para convertir de caracter a flotante 
+    altura = atof(argv[2]);
 
     area= 2* M_PI *radio *(radio+altura);
     volumen= M_PI *radio*radio*altura;

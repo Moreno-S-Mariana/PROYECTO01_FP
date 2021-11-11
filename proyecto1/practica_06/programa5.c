@@ -3,7 +3,7 @@
 /*
 *
 
-este programa ilustra el uso del operador +=
+este programa ilustra el uso del operador + =
 
 *
 */
@@ -13,10 +13,12 @@ int main (){
     x=6;
     printf("x=%d\n", x);
     y=4;
-    printf("y=%d\n", y);
+    printf("y=%d\n", y);  
+
+    // OPERADOR DE ASIGNACIÓN 
     x += 5; // x=x+5
     printf("x=%d\n", x);
-    x+=y;
+    x+=y; // x=x+y
     printf("x=%d\n", x);
 
 

@@ -1,0 +1,20 @@
+1. Elaborar un algoritmo que de solución a la siguiente función
+
+        |    y^3             Si y  mod 4 = 0
+        |
+        |    (y^2 -14)/y~~3  Si y mod 4 = 1
+ f(y)=  |
+        |    y^3+5           Si y mod 4 = 2
+        |
+        |_    sqrt(y)         Si y mod 4 = 3
+
+
+2. Elaborar un algoritmo que determine si tres valores reales forman un triángulo. En caso de que si se forme un triángulo
+determina si corresponde a un equilátero, isósceles o escaleno, además calcular el área del triángulo.
+
+
+3. Elaborar un algoritmo que a partir de un número de 4 dígitos determine si todos los dígitos que componen al número son pares
+   Consideraciones
+   -El número en la entrada no debe ser una cadena sino un entero
+   -El número se tiene que separar por dígitos utilizando la división entera y la operación de módulo
+
