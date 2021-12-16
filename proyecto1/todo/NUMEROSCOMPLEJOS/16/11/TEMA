@@ -1,0 +1,10 @@
+Elaborar un programa que realize operaciones con numeros cmplejos 
+
+    1. suma 
+    2. resta 
+    3. conjugado 
+    4. multiplicacion
+    5. division 
+
+El programa debera tener memoria para almacenar al menos doez numeros complejos 
+El programa debera poder escribir los numeros complejos en un archivo

@@ -1,0 +1,31 @@
+ARREGLOS MULTIDIMENSIONALES 
+
+mat [0][0]
+mat [0][1]
+mat [0][2]
+mat [1][0]
+mat [1][1]     >   forma en la que se almacena la matriz en la memoria 
+mat [1][2]
+mat [2][0]
+mat [2][1]
+mat [2][2]
+
+
+ arreglo de tres por tres    // int mat [3][3]
+        en cada una de las tres localidades se va a guardar tres enteros 
+        renglones = localidades de memoria 
+
+int **mat
+        para un doble apuntador primero reservo memoria para el numero de renglones 
+            mat =(int **)malloc (renglones*sizeof(int *));
+            SI int renglones =3 
+                -> int *
+                -> int *
+                ->int *
+
+                        para almacenar datos en cada uno de los renglones se reserva memoria con un cilclo for 
+
+                        for( int  i=0; i<renglones; i++)
+                            mat [i]=(int *)malloc (columnas *sizeof (int)); 
+
+                                EL APUNTADOR DOBLE APUNTA A UN AREGLO DE PUNTEROS Y CADA UNO DE ELLOS ES UNA FILA

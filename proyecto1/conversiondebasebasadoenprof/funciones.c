@@ -1,33 +1,9 @@
 #include "conversiones.h"
 #include <string.h>
-#include<stdlib.h>
+#include <stdlib.h>
 #include <math.h>
 
-char *conv_decimal_binario(int num)
-{
-    int t=0, i=0, j=0;
-    char *temp=NULL, *binario=NULL;
-    temp = (char*)malloc (sizeof (char));
-    strcpy(temp,"");
-
-    do {
-        t=num %2;
-        num = (int) (num/2);
-        if (t==1) strcat(temp, "1");
-        else strcat (temp, "0");
-    }while (num!= 1&& num!=0);
-
-    if (num == 1) strcat (temp,"1");
-    binario = (char*) malloc (strlen(temp)*sizeof (char));
-    for (i=streln(temp)-1, j=0; i>=0; i--, j++){
-        binario[j]=temp[i];
-    }
-    free (temp);
-    temp = NULL;
-    return binario;
-}
-
-int conv_binario_decimal (char *binario)
+int conv_binario_decimal(char *binario)
 {
     int num = 0, pot = 0;
     for(int i = strlen(binario)-1; i>=0; i--){
@@ -38,68 +14,87 @@ int conv_binario_decimal (char *binario)
     return num;
 }
 
-int conv_hexadecimal_decimal (char *hex)
+char *conv_decimal_binario(int num)
+{
+    int t=0, i=0, j=0;
+    char *temp=NULL, *binario=NULL;
+    temp = (char*)malloc(sizeof(char));
+    strcpy(temp, "");
+
+    do{
+        t= num % 2;        
+        num = (int)(num /2);
+        if(t==1) strcat(temp, "1");
+        else strcat(temp, "0");        
+    }while(num!=1 && num!=0);
+    
+    if(num== 1) strcat(temp, "1");
+    //return binario; Ya no es necesario el return
+
+    binario = (char*)malloc(strlen(temp)*sizeof(char));
+    for(i=strlen(temp)-1, j=0; i >=0; i--, j++){
+        binario[j] = temp[i];
+        //
+    }
+    free(temp);
+    temp = NULL;
+    return binario;
+}
+
+int conv_hexa_decimal(char *hex)
 {
     int num = 0, pot = 0;
-    for (int i = strlen (hex)-1; 1>=0; i--){
-        switch (hex [i]){
-            case'1':
-                num += pow(16, pot); // += se utiliza como operador de asignación para sumar num+pot
+    for(int i = strlen(hex)-1; i>=0; i--){
+        switch(hex[i]){
+            case '1':
+                num += pow(16, pot);
                 break;
-            case'2':
-                num += 2*pow(16, pot); 
+            case '2':
+                num += 2*pow(16, pot);
                 break;
-            case'3':
-                num += 3*pow(16, pot); 
+            case '3':
+                num += 3*pow(16, pot);
                 break;
-            case'4':
-                num += 4*pow(16, pot); 
+            case '4':
                 break;
-            case'5':
-                num += 5*pow(16, pot);
+            case '5':
                 break;
-            case'6':
-                num += 6*pow(16, pot); 
+            case '6':
                 break;
-            case'7':
-                num += 7*pow(16, pot); 
+            case '7':
                 break;
-            case'8':
-                num += 8*pow(16, pot); 
+            case '8':
                 break;
-            case'9':
-                num += 9*pow(16, pot); 
+            case '9':
                 break;
-            case'a':
-            case'A':
-                num += 10*pow(16, pot); 
+            case 'A': 
+            case 'a':
+                num += 10*pow(16, pot);
                 break;
-            case'B':
-            case'b':
+            case 'B': 
+            case 'b':
                 num += 11*pow(16, pot);
                 break;
-            case'c':
-            case'C':
-                num += 12*pow(16, pot); 
+            case 'C': 
+            case 'c':
                 break;
-            case'D':
-            case'd':
-                num += 13*pow(16, pot); 
+            case 'D': 
+            case 'd':
                 break;
-            case'e':
-            case'E':
-                num += 14*pow(16, pot); 
+            case 'E': 
+            case 'e':
                 break;
-            case'f':
-            case'F':
-                num += 15*pow(16, pot); 
+            case 'F': 
+            case 'f':
+                num += 15*pow(16, pot);
                 break;
-        }
-        pot=pot+1;
+        }        
+        pot = pot + 1;
     }
     return num;
 }
-char *conv_decimal_hexadecimal(int num)
+
+char *conv_decimal_hexa(int num)
 {
     int t=0, i=0, j=0;
     char *temp=NULL, *hex=NULL;
@@ -116,43 +111,34 @@ char *conv_decimal_hexadecimal(int num)
                 strcat(temp, "1");        
                 break;
             case 2:
-                strcat(temp, "2");
+                
                 break;
             case 3:
-                strcat(temp, "3");
+                
                 break;
             case 4:
-                strcat(temp, "4");
                 break;
             case 5:
-                strcat(temp, "5");
                 break;
             case 6:
-                strcat(temp, "6");
                 break;
             case 7:
-                strcat(temp, "7");
                 break;
             case 8:
-                strcat(temp, "8");
                 break;
             case 9:
-                strcat(temp, "9");
                 break;
             case 10:             
-                strcat(temp, "A");
+                
                 break;
             case 11:             
-                strcat(temp, "B");
+                
                 break;
             case 12:
-                strcat(temp, "C");
                 break;
             case 13:
-                strcat(temp, "D");
                 break;
             case 14:
-                strcat(temp, "E");
                 break;
             case 15:
                 strcat(temp, "F");
@@ -184,16 +170,12 @@ int conv_octal_decimal(char *octal)
                 num += 3*pow(8, pot);
                 break;
             case '4':
-                num +=4* pow(8, pot);
                 break;
             case '5':
-                num +=5 * pow(8, pot);
                 break;
             case '6':
-                num +=6* pow(8, pot);
                 break;
             case '7':
-                num +=7* pow(8, pot);
                 break;
             
         }        
@@ -215,27 +197,22 @@ char *conv_decimal_octal(int num)
         switch(t){
             case 0:
                 strcat(temp, "0");
-                break;
             case 1:
                 strcat(temp, "1");        
                 break;
             case 2:
-                strcat(temp, "2");  
+                
                 break;
             case 3:
-                strcat(temp, "3");  
+                
                 break;
             case 4:
-                strcat(temp, "4");  
                 break;
             case 5:
-                strcat(temp, "5");  
                 break;
             case 6:
-                strcat(temp, "6");  
                 break;
             case 7:
-                strcat(temp, "7");  
                 break;
             
         }        

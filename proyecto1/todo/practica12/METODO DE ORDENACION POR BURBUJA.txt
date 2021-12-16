@@ -1,0 +1,17 @@
+METODO DE ORDENACION POR BURBUJA
+    Es un algoritmo de ordenamiento 
+        Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente inercambiandolos de posicion si van a ser en el orden equivocado
+
+        20  50  40  80  30
+        20  40  50  80  30          iteración numero 1
+        20  40  50  30  80
+
+        20  40  50  30  80
+        20  40  50  30  80          iteración2
+        20  40  50  30  80  
+        20  40  30  50  80
+
+        20  40  30  50  80
+        20  30  40  50  80          iteración3
+
+        

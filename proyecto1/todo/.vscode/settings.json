@@ -5,6 +5,8 @@
         "DIV.C": "cpp",
         "1.C": "cpp",
         "FX.C": "cpp",
-        "EJ1.C": "cpp"
+        "EJ1.C": "cpp",
+        "MAIN.C": "cpp",
+        "PROGRAMA2.C": "cpp"
     }
 }

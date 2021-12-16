@@ -1,6 +1,7 @@
 #include <stdio.h>
 //%d, %i,%u para enteror
 
+
 int main(){
     int x, y;
     x=5;
